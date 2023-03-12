@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./App.css";
 export default function App() {
   const [data, setData] = useState([]);
-  const [search, setSearch] = useState("reactjs");
+  const [search, setSearch] = useState("");
   const [text, setText] = useState("");
   const [value, setValue] = useState("");
   const tonav = useNavigate();
@@ -21,8 +21,8 @@ export default function App() {
     };
     const prevdata = JSON.parse(localStorage.getItem("fav")) || [];
     const newData = [...prevdata, data];
-    let z = newData.indexOf(data.value);
-    console.log(z);
+    // let z = newData.indexOf(data.value);
+    // console.log(z);
     if (newData.indexOf(data.value === -1)) {
       localStorage.setItem("fav", JSON.stringify(newData));
       setValue("");

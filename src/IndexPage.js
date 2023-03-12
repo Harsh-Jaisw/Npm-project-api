@@ -36,7 +36,6 @@ export default function IndexPage() {
         item.edit = false;
       }
     });
-    tonav("/fav");
     setFavData([...favdata]);
     localStorage.setItem("fav", JSON.stringify([...favdata]));
   }
